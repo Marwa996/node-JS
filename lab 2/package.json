@@ -1,0 +1,14 @@
+{
+  "name": "lab-2",
+  "version": "1.0.0",
+  "description": "initializing package.json",
+  "main": "file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marwa abd el-moneim",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
