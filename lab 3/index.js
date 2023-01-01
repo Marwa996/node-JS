@@ -39,12 +39,13 @@ app.get("/name",function(req,res){
 
 //post method
 
-app.get("/login",function(req,res){
+app.get("/",function(req,res){
     res.sendFile(path.join(__dirname,"/login.html"));
 })
 
 app.use(express.urlencoded({extended:true}));
-app.post("/pass",function(req,res){
+
+app.post("/login",function(req,res){
     res.send(`<h1>Welcome ${req.body.user}`);
 })
 
