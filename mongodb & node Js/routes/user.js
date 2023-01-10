@@ -23,7 +23,7 @@ router.get("/",userController.getUsers);
 router.post("/register",userController.addNewUser);
 
 //update user
-router.put("/:id",userController.UpdateUser);
+router.patch("/:id",userController.UpdateUser);
 
 //delete user
 router.delete("/:id",userController.deleteUser);

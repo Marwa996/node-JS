@@ -23,7 +23,7 @@ router.get("/:id",todoController.getTodoByUserId);
 router.post("/",todoController.addNewTodo);
 
 //update user
-router.put("/:id",todoController.UpdateTodo);
+router.patch("/:id",todoController.UpdateTodo);
 
 //delete user
 router.delete("/:id",todoController.deletetodo);
