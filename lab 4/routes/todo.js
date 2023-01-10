@@ -6,7 +6,7 @@ router.use(express.urlencoded({extended:true}));
 
 //create todo
 
-router.post("/todos",function(req,res){
+router.post("/",function(req,res){
     let todo=fs.readFileSync('todo.json','utf-8');
     user=JSON.parse(todo);
     user.push(req.body);
@@ -16,13 +16,13 @@ router.post("/todos",function(req,res){
 
 //list all todos
 
-router.get("/todos",function(req,res){
+router.get("/",function(req,res){
     res.sendFile(path.join(__dirname,"todo.json"));
 })
 
 //get todo with Id
 
-router.get("/todos/:id",function(req,res){
+router.get("/:id",function(req,res){
     let todo=fs.readFileSync("todo.json","utf-8");
     todo=JSON.parse(todo);
     let data=todo.find((item)=>item.id==req.params.id);
